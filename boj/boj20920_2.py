@@ -12,9 +12,9 @@ for w in word:
         words[w]+=1
 
 
-result = list(words.keys())
+keys = list(words.keys())
 
-result.sort(key=lambda x: (-words[x],-len(x),x))
+result = sorted(keys, key=lambda x: (-words[x],-len(x),x))
 
 for item in result:
     print(item)
